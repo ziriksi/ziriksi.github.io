@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ziriksi</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <img src="/title.gif"><br>
+  <p>
+    hi!!!! im ziriksi (k before s, get it right ok) this is my web site.
+  </p>
+
+  <div class="small-image">
+    <img src="/cat.gif"><img src="/cat.gif"><img src="/cat.gif"><img src="/cat.gif"><img src="/cat.gif"><img src="/cat.gif"><br>
+  </div>
+  
+  <h1>about me</h1>
+  <ul>
+    <li>i am 17 year old (born 2006)</li>
+    <li>i live in texas yee haw!</li>
+    <li>i like video games! i play geometry dash lots, but my fvaorite game is mother 3</li>
+    <li>i code games and stuff a lot, my favorite language is javascript (might try typescript too. hmm)</li>
+    <li>i make pixel art trying 2 do traditional art soon too</li>
+  </ul>
+
+  <h1>geometry dash</h1>
+  <h2></h2>yeah, i made a section just for this game what are you gonna do sue me</h3>
+  <ul>
+    <li>im a decent player AND creator</li>
+    <li>these are my top 10 hardest
+      <ol>
+        <li>sunset sandstorm (240hz)</li>
+        <li>troll level two (240hz)</li>
+        <li>deception dive (60hz)</li>
+        <li>troll level (30hz 1.1x classic speedhack)</li>
+        <li>falling up (144hz)</li>
+        <li>mothmelons (60hz)</li>
+        <li>idol19 (240hz)</li>
+        <li>sineform (60hz)</li>
+        <li>deadlocked (240hz 1.7x new speedhack)</li>
+        <li>i wanna be the guy (240hz)</li>
+      </ol>
+    </li>
+    <li>currently attempting
+      <ul>
+        <li>bloodbath (83%) (240hz)</li>
+        <li>shardscapes (30% / 41-67%) (240hz)</li>
+        
+      </ul>
+    </li>
+    <li>i have some levels i made, u can see them on my youtube</li>
+    <li>heres my unfinished levels (sorted by priority high to low)
+      <ol>
+        <li>NONE!!!!</li>
+      </ol>
+    </li>
+  </ul>
+
+  <div class="small-image">
+    <img src="at.gif"><img src="at.gif"><img src="at.gif">
+  </div>
+  
+  <h1>my social webs</h1>
+  <div class="socials-box">
+    <button>
+      <a href="https://youtube.com/c/ziriksi">youtube</a>
+    </button>
+    <button>
+      <a href="https://twitter.com/home_resonance">twitter</a>
+    </button>
+    <button>
+      <a href="https://instagram.com/ziriksi">instagram</a>
+    </button>
+    <button>
+      <a href="https://replit.com/@6w6">replit</a>
+    </button>
+    <button>
+      <a href="https://github.com/ziriksi">github</a>
+    </button>
+    <button>
+      <a href="javascript:alert('ziriksi#1600')">discord</a>
+    </button>
+    <button>
+      <a href="https://bsky.app/profile/robtop.bsky.social">bluesky</a>
+    </button>
+  </div>
+
+  <br><br>
+
+
+  <script>
+    const buttons = document.querySelectorAll('button');
+    const amt = buttons.length;
+    let boxY = 1150;
+    let rotateI = 0;
+    setInterval(() => {
+      rotateI += 0.004;
+      for(const i in buttons) {
+        boxY = document.querySelector('.socials-box').getBoundingClientRect().top + window.scrollY;
+        buttons[i].style.left = 200 + 200 * Math.cos(rotateI + Math.PI * 2 / amt * i) + 'px';
+        buttons[i].style.top = boxY + 200 + 200 * Math.sin(rotateI + Math.PI * 2 / amt * i) + 'px';
+      }
+    }, 10);
+  </script>
+
+  
+  <script>
+      let colorI = 0;
+      setInterval(() => {
+        colorI++;
+        colorI %= 15;
+        const hsl = `hsl(${colorI * 24}, 100%, 70%)`;
+        document.body.style.color = `hsl(${(colorI * 24 + 180) % 360}, 100%, 70%)`;
+        document.body.style.textShadow = `-1px -1px 0 ${hsl}, 1px -1px 0 ${hsl}, -1px 1px 0 ${hsl}, 1px 1px 0 ${hsl}`;
+      }, 60);
+    </script>
+</body>
+  
+</html>

@@ -1,0 +1,31 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url('/bg.jpeg');
+  width: 100%;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 50px;
+  margin-top: 10px;
+}
+
+.small-image img {
+  width: 100px;
+  height: 100px;
+}
+
+.socials-box {
+  width: 400px;
+  height: 400px;
+}
+
+.socials-box > button {
+  position: absolute;
+  top: 0px; left: 0px;
+  font-size: 36px;
+}
